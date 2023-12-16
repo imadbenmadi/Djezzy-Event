@@ -19,7 +19,7 @@ export default function NavBar() {
 
             <div className="
              shadow-lg cursor-pointer p-2 rounded-full">
-                <CiSearch />
+                <CiSearch className=" text-xl "/>
             </div>
         </div>
     );
