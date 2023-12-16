@@ -7,7 +7,6 @@ import ImgMedicin from "../../assets/medicin.png";
 import ImgBank from "../../assets/bank.jpg";
 import ImgTaxi from "../../assets/taxi.png";
 import { Link, Outlet } from "react-router-dom";
-import { Outlet } from "react-router-dom";
 export default function Search() {
     const [searchTerm, setSearchTerm] = useState("");
     const items = [
@@ -48,13 +47,22 @@ export default function Search() {
                     </div>
                 </div>
                 {(filteredItems.length === 0 || searchTerm === "") && (
-                    <div className="flex justify-center items-center h-[60vh]">
+                    <div className="flex justify-center items-center flex-col h-[60vh]">
                         <img
                             src={
                                 searchTerm === "" ? Default_Search : ImgNotFound
                             }
                             alt="Not Found"
                         />
+                        {searchTerm === "" ? (
+                            <p className="text-2xl font-bold">
+                                Faites Votre Recherche Parmi Les 5176 Dossier
+                            </p>
+                        ) : (
+                            <p className="text-2xl font-bold">
+                                No results found
+                            </p>
+                        )}
                     </div>
                 )}
                 {filteredItems.length > 0 && searchTerm !== "" && (
@@ -75,7 +83,6 @@ export default function Search() {
                     </div>
                 )}
             </div>
-            <Outlet />
         </>
     );
 }
