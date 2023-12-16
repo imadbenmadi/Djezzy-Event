@@ -80,19 +80,18 @@ export default function Search() {
                     <div className="flex flex-col gap-4 p-4">
                         {filteredItems.map((item, index) => (
                             // Pass data to the Company component via props
-                            <Link
-                                to={ `/Search/${index}` }
-                                key={index}
-                            >
-                                <div className="bg-gray-200 p-3 rounded flex justify-start items-center gap-5">
-                                    <img
-                                        src={item.image}
-                                        alt={item.key}
-                                        className="w-10 h-10 object-cover rounded-full "
-                                    />
-                                    <p>{item.value}</p>
-                                </div>
-                            </Link>
+                            <>
+                                <Link to={`/Search/${index}`} key={index}>
+                                    <div className="bg-gray-200 p-3 rounded flex justify-start items-center gap-5">
+                                        <img
+                                            src={item.image}
+                                            alt={item.key}
+                                            className="w-10 h-10 object-cover rounded-full "
+                                        />
+                                        <p>{item.value}</p>
+                                    </div>
+                                </Link>
+                            </>
                         ))}
                     </div>
                 )}

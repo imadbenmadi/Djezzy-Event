@@ -3,14 +3,16 @@ import { items } from "../Pages/Search";
 import { useParams } from "react-router-dom";
 
 export default function Item() {
-    const { index } = useParams();
-
+    const { key } = useParams();
+    // Find the item with the specified key
+    const selectedItem = items[key];
+    
     return (
         <div>
-            {items[index] && (
+            {selectedItem && (
                 <div>
-                    <p>Key: {items[index].key}</p>
-                    <p>Value: {items[index].value}</p>
+                    <p>Key: {selectedItem.key}</p>
+                    <p>Value: {selectedItem.value}</p>
                     {/* Add any other data you want to display */}
                 </div>
             )}
