@@ -7,8 +7,10 @@ export default function Home() {
         <div className="w-[100%]">
             <NavBar />
             <div className=" mt-[64px]"></div>
-            <New_Subs />
-            <Latest/>
+            <div className=" bg-gray-100">
+                <New_Subs />
+                <Latest />
+            </div>
         </div>
     );
 }
