@@ -1,9 +1,10 @@
 import React from "react";
 import { CiSearch } from "react-icons/ci";
-import Logo from '../../assets/Logoo.png'  
+import Logo from "../../assets/Logoo.png";
+import { Link } from "react-router-dom";
 export default function NavBar() {
     return (
-        <div className=" fixed items-center top-0 flex w-[100%] p-2 shadow ">
+        <div className=" bg-white fixed items-center top-0 flex w-[100%] p-2 shadow ">
             <div className=" mr-2">
                 <img src={Logo} alt="" />
             </div>
@@ -17,9 +18,13 @@ export default function NavBar() {
                 <div className=" font-semibold">Vos Dossier en un Clic</div>
             </div>
 
-            <div className="
-             shadow-lg cursor-pointer p-2 rounded-full">
-                <CiSearch className=" text-xl "/>
+            <div
+                className="
+             shadow-lg cursor-pointer p-2 rounded-full"
+            >
+                <Link to={"/Search"}>
+                    <CiSearch className=" text-xl " />
+                </Link>
             </div>
         </div>
     );
