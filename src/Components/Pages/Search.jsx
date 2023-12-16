@@ -1,3 +1,4 @@
+// Import necessary dependencies and components
 import React, { useState } from "react";
 import { IoMdArrowRoundBack } from "react-icons/io";
 import { CiSearch } from "react-icons/ci";
@@ -6,7 +7,9 @@ import Default_Search from "../../assets/Default_Search.jpg";
 import ImgMedicin from "../../assets/medicin.png";
 import ImgBank from "../../assets/bank.jpg";
 import ImgTaxi from "../../assets/taxi.png";
-import { Link, Outlet } from "react-router-dom";
+import { Link } from "react-router-dom";
+
+// Define the Search component
 export default function Search() {
     const [searchTerm, setSearchTerm] = useState("");
     const items = [
@@ -52,7 +55,8 @@ export default function Search() {
                             src={
                                 searchTerm === "" ? Default_Search : ImgNotFound
                             }
-                            alt="Not Found" className=" w-[200px]"
+                            alt="Not Found"
+                            className="w-[200px]"
                         />
                         {searchTerm === "" ? (
                             <p className="text-2xl font-bold m-4">
@@ -68,11 +72,12 @@ export default function Search() {
                 {filteredItems.length > 0 && searchTerm !== "" && (
                     <div className="flex flex-col gap-4 p-4">
                         {filteredItems.map((item, index) => (
-                            <Link to={"/Company"}>
-                                <div
-                                    key={index}
-                                    className="bg-gray-200 p-3 rounded flex justify-start items-center gap-5"
-                                >
+                            // Pass data to the Company component via props
+                            <Link
+                                to={{ pathname: "/Company", state: { item } }}
+                                key={index}
+                            >
+                                <div className="bg-gray-200 p-3 rounded flex justify-start items-center gap-5">
                                     <img
                                         src={item.image}
                                         alt={item.key}
