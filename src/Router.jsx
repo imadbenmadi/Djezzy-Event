@@ -13,6 +13,7 @@ const routes = createBrowserRouter([
             {
                 path: "/Search",
                 element: <Search />,
+                children: [{ path: "/:key", element: <Item /> }],
             },
             // { path: "/Notifications", element: <Notifications /> },
             // { path: "/Notifications", element: <Notifications /> },
