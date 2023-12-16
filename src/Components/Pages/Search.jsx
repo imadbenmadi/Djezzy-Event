@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import { IoMdArrowRoundBack } from "react-icons/io";
 import { CiSearch } from "react-icons/ci";
 import ImgNotFound from "../../assets/NotFound_Search.png";
+import Default_Search from "../../assets/Default_Search.jpg";
 import ImgMedicin from "../../assets/medicin.png";
 import ImgBank from "../../assets/bank.jpg";
 import ImgTaxi from "../../assets/taxi.png";
+import { Link } from "react-router-dom";
 
 export default function Search() {
     const [searchTerm, setSearchTerm] = useState("");
@@ -25,7 +27,9 @@ export default function Search() {
         <div>
             <div className="flex justify-center gap-5 p-2">
                 <div className="p-2 rounded shadow-lg cursor-pointer">
-                    <IoMdArrowRoundBack />
+                    <Link to={"/"}>
+                        <IoMdArrowRoundBack />
+                    </Link>
                 </div>
                 <div className="flex w-[80%] justify-between items-center shadow rounded">
                     <div className="flex-[70%]">
@@ -42,14 +46,21 @@ export default function Search() {
                     </div>
                 </div>
             </div>
-            {filteredItems.length === 0 || searchTerm === "" ? (
+            {(filteredItems.length === 0 || searchTerm === "") && (
                 <div className="flex justify-center items-center h-[60vh]">
-                    <img src={ImgNotFound} alt="Not Found" />
+                    <img
+                        src={searchTerm === "" ? Default_Search : ImgNotFound}
+                        alt="Not Found"
+                    />
                 </div>
-            ) : (
+            )}
+            {filteredItems.length > 0 && searchTerm !== "" && (
                 <div className="flex flex-col gap-4 p-4">
                     {filteredItems.map((item, index) => (
-                        <div key={index} className="bg-gray-200 p-3 rounded flex justify-start items-center gap-5">
+                        <div
+                            key={index}
+                            className="bg-gray-200 p-3 rounded flex justify-start items-center gap-5"
+                        >
                             <img
                                 src={item.image}
                                 alt={item.key}
