@@ -12,7 +12,7 @@ export default function NavBar() {
                 <div className="  ">
                     Bienvenue
                     <span className=" ml-1 text-purple-500 font-semibold">
-                        Geust
+                        Guest
                     </span>
                 </div>
                 <div className=" font-semibold">Vos Dossier en un Clic</div>
