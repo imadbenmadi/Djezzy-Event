@@ -58,7 +58,7 @@ export default function Search() {
                         style={{ boxShadow: "0px 0px 5px 0px gray" }}
                     >
                         <Link to={"/"}>
-                            <IoMdArrowRoundBack className="text-3xl" />
+                            <IoMdArrowRoundBack className="text-3xl text-purple-500" />
                         </Link>
                     </div>
                     <div className="flex items-center bg-white rounded-full overflow-hidden shadow-xl focus-within:ring-2 focus-within:ring-purple-500">
