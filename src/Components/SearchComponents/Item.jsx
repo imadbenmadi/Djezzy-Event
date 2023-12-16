@@ -1,3 +1,4 @@
+// Item.js
 import React from "react";
 
 export default function Item(props) {
@@ -7,11 +8,8 @@ export default function Item(props) {
         return <div>Data not available</div>;
     }
 
-    // Access the props data
-    const { location } = props;
-    const item = location.state.item;
-
-    // Now 'item' contains the data passed from the Search component
+    // Access the item data from props
+    const item = props.location.state.item;
 
     return (
         <div>

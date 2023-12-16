@@ -74,7 +74,7 @@ export default function Search() {
                         {filteredItems.map((item, index) => (
                             // Pass data to the Company component via props
                             <Link
-                                to={{ pathname: "/Company", state: { item } }}
+                                to={{ pathname: `/Search/${index}`, state: { item } }}
                                 key={index}
                             >
                                 <div className="bg-gray-200 p-3 rounded flex justify-start items-center gap-5">

@@ -16,7 +16,7 @@ const routes = createBrowserRouter([
                 element: <Search />,
             },
             {
-                path: "/Company",
+                path: "/Search/:key",
                 element: <Item />,
             },
             {
