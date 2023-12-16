@@ -4,7 +4,9 @@ import { Outlet } from "react-router";
 export default function App() {
     return (
         <>
-            <Outlet />
+            <div className=" relative z-0">
+                <Outlet />
+            </div>
             <div
                 className=" bg-red-400 w-full h-[100px] absolute bottom-0 flex flex-row-reverse items-center justify-center gap-4 z-50
       "
