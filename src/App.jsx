@@ -8,7 +8,7 @@ export default function App() {
                 <Outlet />
             </div>
             <div
-                className=" bg-gray-100  w-full h-[60px] absolute bottom-0 flex  items-center justify-center gap-4 z-50
+                className=" bg-gray-200  w-full h-[60px] absolute bottom-0 flex  items-center justify-center gap-4 z-50
       "
             >
                 <div>home </div>
