@@ -4,7 +4,7 @@ import Logo from "../../assets/Logoo.png";
 import { Link } from "react-router-dom";
 export default function NavBar() {
     return (
-        <div className=" bg-white fixed items-center top-0 flex w-[100%] p-2 shadow-xl ">
+        <div className=" bg-white fixed items-center top-0 flex w-[100%] p-2 shadow-xl z-50 ">
             <div className=" ml-[40px]">
                 <img src={Logo} alt="" className=" w-12" />
             </div>
