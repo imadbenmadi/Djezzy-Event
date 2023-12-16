@@ -11,30 +11,36 @@ import { Link } from "react-router-dom";
 export const items = [
     {
         key: "medicin",
+        nbr: 0,
         title: "Aspirin",
         description: "Medical Things",
         image: ImgMedicin,
     },
     {
         key: "bank",
+        nbr: 1,
         title: "Bank of America",
         description: "Bank Things",
         image: ImgBank,
     },
     {
         key: "taxi",
+        nbr: 2,
+
         title: "Yellow Taxi",
         description: "taxi Things",
         image: ImgTaxi,
     },
     {
         key: "medicin",
+        nbr: 3,
         title: "Paracetamol",
         description: "Medical Things",
         image: ImgMedicin,
     },
     {
         key: "bank",
+        nbr: 4,
         title: "Wells Fargo",
         description: "Medical Things",
         image: ImgBank,
@@ -114,7 +120,7 @@ export default function Search() {
                                 className="w-[100%] rounded-xl"
                                 style={{ boxShadow: "0px 0px 5px 0px gray" }}
                             >
-                                <Link to={`/Search/${index}`} key={index}>
+                                <Link to={`/Search/${item.nbr}`} key={index}>
                                     <div className="bg-white p-3 rounded-xl flex justify-start items-center gap-5">
                                         <img
                                             src={item.image}
