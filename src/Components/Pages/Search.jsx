@@ -19,7 +19,7 @@ export const items = [
 // Define the Search component
 export default function Search() {
     const [searchTerm, setSearchTerm] = useState("");
-     const items = [
+    const items = [
         { key: "medicin", value: "Aspirin", image: ImgMedicin },
         { key: "bank", value: "Bank of America", image: ImgBank },
         { key: "taxi", value: "Yellow Taxi", image: ImgTaxi },
@@ -81,9 +81,12 @@ export default function Search() {
                     </div>
                 )}
                 {filteredItems.length > 0 && searchTerm !== "" && (
-                    <div className="flex flex-col gap-4 p-4 w-[60%] m-auto">
-                        <div className=" font-semibold text-sm underline
-                        ">{filteredItems.length} Dossier Trouvées </div>
+                    <div className="flex flex-col gap-4 p-4 md:w-[60%] m-auto">
+                        <div
+                            className=" font-semibold text-sm underline"
+                        >
+                            {filteredItems.length} Dossier Trouvées{" "}
+                        </div>
                         {filteredItems.map((item, index) => (
                             // Pass data to the Company component via props
                             <div className=" w-[100%]">
