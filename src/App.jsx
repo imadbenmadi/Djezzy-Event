@@ -4,7 +4,7 @@ import { Outlet } from "react-router";
 export default function App() {
     return (
         <>
-            <div className=" relative z-0">
+            <div className=" relative z-0 overflow-auto h-[100vh]">
                 <Outlet />
             </div>
             <div
