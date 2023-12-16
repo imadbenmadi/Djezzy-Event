@@ -4,6 +4,7 @@ import Home from "./Components/Pages/Home";
 import App from "./App";
 import Search from "./Components/Pages/Search";
 import NotFound from "./Components/NotFound";
+import Item from "./Components/SearchComponents/Item";
 const routes = createBrowserRouter([
     {
         path: "/",

@@ -52,10 +52,10 @@ export default function Search() {
                             src={
                                 searchTerm === "" ? Default_Search : ImgNotFound
                             }
-                            alt="Not Found"
+                            alt="Not Found" className=" w-[200px]"
                         />
                         {searchTerm === "" ? (
-                            <p className="text-2xl font-bold">
+                            <p className="text-2xl font-bold m-4">
                                 Faites Votre Recherche Parmi Les 5176 Dossier
                             </p>
                         ) : (
@@ -68,17 +68,19 @@ export default function Search() {
                 {filteredItems.length > 0 && searchTerm !== "" && (
                     <div className="flex flex-col gap-4 p-4">
                         {filteredItems.map((item, index) => (
-                            <div
-                                key={index}
-                                className="bg-gray-200 p-3 rounded flex justify-start items-center gap-5"
-                            >
-                                <img
-                                    src={item.image}
-                                    alt={item.key}
-                                    className="w-10 h-10 object-cover rounded-full "
-                                />
-                                <p>{item.value}</p>
-                            </div>
+                            <Link to={"/Company"}>
+                                <div
+                                    key={index}
+                                    className="bg-gray-200 p-3 rounded flex justify-start items-center gap-5"
+                                >
+                                    <img
+                                        src={item.image}
+                                        alt={item.key}
+                                        className="w-10 h-10 object-cover rounded-full "
+                                    />
+                                    <p>{item.value}</p>
+                                </div>
+                            </Link>
                         ))}
                     </div>
                 )}
