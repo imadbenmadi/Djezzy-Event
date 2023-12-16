@@ -9,23 +9,41 @@ import ImgBank from "../../assets/bank.jpg";
 import ImgTaxi from "../../assets/taxi.png";
 import { Link } from "react-router-dom";
 export const items = [
-    { key: "medicin", value: "Aspirin", image: ImgMedicin },
-    { key: "bank", value: "Bank of America", image: ImgBank },
-    { key: "taxi", value: "Yellow Taxi", image: ImgTaxi },
-    { key: "medicin", value: "Paracetamol", image: ImgMedicin },
-    { key: "bank", value: "Wells Fargo", image: ImgBank },
+    {
+        key: "medicin",
+        title: "Aspirin",
+        description: "Medical Things",
+        image: ImgMedicin,
+    },
+    {
+        key: "bank",
+        title: "Bank of America",
+        description: "Bank Things",
+        image: ImgBank,
+    },
+    {
+        key: "taxi",
+        title: "Yellow Taxi",
+        description: "taxi Things",
+        image: ImgTaxi,
+    },
+    {
+        key: "medicin",
+        title: "Paracetamol",
+        description: "Medical Things",
+        image: ImgMedicin,
+    },
+    {
+        key: "bank",
+        title: "Wells Fargo",
+        description: "Medical Things",
+        image: ImgBank,
+    },
     // Add more items with different key-value pairs and images
 ];
 // Define the Search component
 export default function Search() {
     const [searchTerm, setSearchTerm] = useState("");
-    const items = [
-        { key: "medicin", value: "Aspirin", image: ImgMedicin },
-        { key: "bank", value: "Bank of America", image: ImgBank },
-        { key: "taxi", value: "Yellow Taxi", image: ImgTaxi },
-        { key: "medicin", value: "Paracetamol", image: ImgMedicin },
-        { key: "bank", value: "Wells Fargo", image: ImgBank },
-    ];
 
     const filteredItems = items.filter((item) =>
         item.key.toLowerCase().includes(searchTerm.toLowerCase())
@@ -61,43 +79,54 @@ export default function Search() {
                 </div>
 
                 {(filteredItems.length === 0 || searchTerm === "") && (
-                    <div className="flex justify-center items-center flex-col h-[60vh] mt-10">
-                        <img
-                            src={
-                                searchTerm === "" ? Default_Search : ImgNotFound
-                            }
-                            alt="Not Found"
-                            className="w-[200px]"
-                        />
-                        {searchTerm === "" ? (
-                            <p className="text-2xl font-bold m-4">
-                                Faites Votre Recherche Parmi Les 5176 Dossier
-                            </p>
-                        ) : (
-                            <p className="text-2xl font-bold">
-                                No results found
-                            </p>
-                        )}
-                    </div>
+                    <>
+                        <div className="flex justify-center items-center flex-col h-[60vh] mt-10">
+                            <img
+                                src={
+                                    searchTerm === ""
+                                        ? Default_Search
+                                        : ImgNotFound
+                                }
+                                alt="Not Found"
+                                className="w-[200px]"
+                            />
+                            {searchTerm === "" ? (
+                                <p className="text-2xl font-bold m-4">
+                                    Faites Votre Recherche Parmi Les 5176
+                                    Dossier
+                                </p>
+                            ) : (
+                                <p className="text-2xl font-bold">
+                                    No results found
+                                </p>
+                            )}
+                        </div>
+                    </>
                 )}
                 {filteredItems.length > 0 && searchTerm !== "" && (
                     <div className="flex flex-col gap-4 p-4 md:w-[60%] m-auto">
-                        <div
-                            className=" font-semibold text-sm underline"
-                        >
+                        <div className=" font-semibold text-sm underline">
                             {filteredItems.length} Dossier Trouvées{" "}
                         </div>
                         {filteredItems.map((item, index) => (
                             // Pass data to the Company component via props
-                            <div className=" w-[100%]">
+                            <div
+                                className="w-[100%] rounded-xl"
+                                style={{ boxShadow: "0px 0px 5px 0px gray" }}
+                            >
                                 <Link to={`/Search/${index}`} key={index}>
-                                    <div className="bg-gray-200 p-3 rounded flex justify-start items-center gap-5">
+                                    <div className="bg-white p-3 rounded-xl flex justify-start items-center gap-5">
                                         <img
                                             src={item.image}
                                             alt={item.key}
-                                            className="w-10 h-10 object-cover rounded-full "
+                                            className="w-10 h-10 object-cover rounded-full"
                                         />
-                                        <p>{item.value}</p>
+                                        <div className="flex flex-col">
+                                            <p className="font-semibold">
+                                                {item.title}
+                                            </p>
+                                            <p>{item.description}</p>
+                                        </div>
                                     </div>
                                 </Link>
                             </div>
