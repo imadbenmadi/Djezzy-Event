@@ -36,26 +36,33 @@ export default function Search() {
         <>
             <div>
                 <div className="flex justify-center gap-5 p-2">
-                    <div className="p-2 rounded shadow-lg cursor-pointer">
+                    <div
+                        className="p-2 rounded  cursor-pointer "
+                        style={{ boxShadow: "0px 0px 5px 0px gray" }}
+                    >
                         <Link to={"/"}>
-                            <IoMdArrowRoundBack />
+                            <IoMdArrowRoundBack className="text-3xl" />
                         </Link>
                     </div>
-                    <div className="flex w-[80%] justify-between items-center shadow rounded">
-                        <div className="flex-[70%]">
+                    <div
+                        className="flex items-center bg-white rounded-full overflow-hidden shadow-xl focus-within:ring-2 focus-within:ring-purple-500"
+                    >
+                        <div className="flex-1 md:w-[450px]">
                             <input
                                 id="search_input"
                                 type="text"
-                                className="w-full focus:outline-none focus:shadow-none"
+                                className="w-full px-4 py-2 focus:outline-none"
+                                placeholder="Search..."
                                 value={searchTerm}
                                 onChange={(e) => setSearchTerm(e.target.value)}
                             />
                         </div>
-                        <div className="flex-[5%] flex justify-center items-center">
-                            <CiSearch />
+                        <div className="flex items-center justify-center p-2">
+                            <CiSearch className="text-gray-500 text-3xl cursor-pointer" />
                         </div>
                     </div>
                 </div>
+
                 {(filteredItems.length === 0 || searchTerm === "") && (
                     <div className="flex justify-center items-center flex-col h-[60vh]">
                         <img
