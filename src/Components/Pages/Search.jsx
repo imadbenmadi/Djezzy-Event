@@ -6,8 +6,8 @@ import Default_Search from "../../assets/Default_Search.jpg";
 import ImgMedicin from "../../assets/medicin.png";
 import ImgBank from "../../assets/bank.jpg";
 import ImgTaxi from "../../assets/taxi.png";
-import { Link } from "react-router-dom";
-
+import { Link, Outlet } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 export default function Search() {
     const [searchTerm, setSearchTerm] = useState("");
     const items = [
@@ -24,53 +24,58 @@ export default function Search() {
     );
 
     return (
-        <div>
-            <div className="flex justify-center gap-5 p-2">
-                <div className="p-2 rounded shadow-lg cursor-pointer">
-                    <Link to={"/"}>
-                        <IoMdArrowRoundBack />
-                    </Link>
+        <>
+            <div>
+                <div className="flex justify-center gap-5 p-2">
+                    <div className="p-2 rounded shadow-lg cursor-pointer">
+                        <Link to={"/"}>
+                            <IoMdArrowRoundBack />
+                        </Link>
+                    </div>
+                    <div className="flex w-[80%] justify-between items-center shadow rounded">
+                        <div className="flex-[70%]">
+                            <input
+                                id="search_input"
+                                type="text"
+                                className="w-full focus:outline-none focus:shadow-none"
+                                value={searchTerm}
+                                onChange={(e) => setSearchTerm(e.target.value)}
+                            />
+                        </div>
+                        <div className="flex-[5%] flex justify-center items-center">
+                            <CiSearch />
+                        </div>
+                    </div>
                 </div>
-                <div className="flex w-[80%] justify-between items-center shadow rounded">
-                    <div className="flex-[70%]">
-                        <input
-                            id="search_input"
-                            type="text"
-                            className="w-full focus:outline-none focus:shadow-none"
-                            value={searchTerm}
-                            onChange={(e) => setSearchTerm(e.target.value)}
+                {(filteredItems.length === 0 || searchTerm === "") && (
+                    <div className="flex justify-center items-center h-[60vh]">
+                        <img
+                            src={
+                                searchTerm === "" ? Default_Search : ImgNotFound
+                            }
+                            alt="Not Found"
                         />
                     </div>
-                    <div className="flex-[5%] flex justify-center items-center">
-                        <CiSearch />
+                )}
+                {filteredItems.length > 0 && searchTerm !== "" && (
+                    <div className="flex flex-col gap-4 p-4">
+                        {filteredItems.map((item, index) => (
+                            <div
+                                key={index}
+                                className="bg-gray-200 p-3 rounded flex justify-start items-center gap-5"
+                            >
+                                <img
+                                    src={item.image}
+                                    alt={item.key}
+                                    className="w-10 h-10 object-cover rounded-full "
+                                />
+                                <p>{item.value}</p>
+                            </div>
+                        ))}
                     </div>
-                </div>
+                )}
             </div>
-            {(filteredItems.length === 0 || searchTerm === "") && (
-                <div className="flex justify-center items-center h-[60vh]">
-                    <img
-                        src={searchTerm === "" ? Default_Search : ImgNotFound}
-                        alt="Not Found"
-                    />
-                </div>
-            )}
-            {filteredItems.length > 0 && searchTerm !== "" && (
-                <div className="flex flex-col gap-4 p-4">
-                    {filteredItems.map((item, index) => (
-                        <div
-                            key={index}
-                            className="bg-gray-200 p-3 rounded flex justify-start items-center gap-5"
-                        >
-                            <img
-                                src={item.image}
-                                alt={item.key}
-                                className="w-10 h-10 object-cover rounded-full "
-                            />
-                            <p>{item.value}</p>
-                        </div>
-                    ))}
-                </div>
-            )}
-        </div>
+            <Outlet />
+        </>
     );
 }
