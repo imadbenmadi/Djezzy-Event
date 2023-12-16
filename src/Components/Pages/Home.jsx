@@ -1,10 +1,10 @@
 import React from 'react'
-import routes from '../../Router'
+import NavBar from '../HomeComponents/NavBar'
 export default function Home() {
   return (
-      <div className=''>
-          aaaaaa
-    </div>
-  )
+      <div className="w-[100%]">
+          <NavBar />
+      </div>
+  );
 }
  
