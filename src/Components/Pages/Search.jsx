@@ -25,7 +25,6 @@ export default function Search() {
         { key: "taxi", value: "Yellow Taxi", image: ImgTaxi },
         { key: "medicin", value: "Paracetamol", image: ImgMedicin },
         { key: "bank", value: "Wells Fargo", image: ImgBank },
-        // Add more items with different key-value pairs and images
     ];
 
     const filteredItems = items.filter((item) =>
@@ -44,9 +43,7 @@ export default function Search() {
                             <IoMdArrowRoundBack className="text-3xl" />
                         </Link>
                     </div>
-                    <div
-                        className="flex items-center bg-white rounded-full overflow-hidden shadow-xl focus-within:ring-2 focus-within:ring-purple-500"
-                    >
+                    <div className="flex items-center bg-white rounded-full overflow-hidden shadow-xl focus-within:ring-2 focus-within:ring-purple-500">
                         <div className="flex-1 md:w-[450px]">
                             <input
                                 id="search_input"
@@ -64,7 +61,7 @@ export default function Search() {
                 </div>
 
                 {(filteredItems.length === 0 || searchTerm === "") && (
-                    <div className="flex justify-center items-center flex-col h-[60vh]">
+                    <div className="flex justify-center items-center flex-col h-[60vh] mt-10">
                         <img
                             src={
                                 searchTerm === "" ? Default_Search : ImgNotFound
@@ -84,10 +81,12 @@ export default function Search() {
                     </div>
                 )}
                 {filteredItems.length > 0 && searchTerm !== "" && (
-                    <div className="flex flex-col gap-4 p-4">
+                    <div className="flex flex-col gap-4 p-4 w-[60%] m-auto">
+                        <div className=" font-semibold text-sm underline
+                        ">{filteredItems.length} Dossier Trouvées </div>
                         {filteredItems.map((item, index) => (
                             // Pass data to the Company component via props
-                            <>
+                            <div className=" w-[100%]">
                                 <Link to={`/Search/${index}`} key={index}>
                                     <div className="bg-gray-200 p-3 rounded flex justify-start items-center gap-5">
                                         <img
@@ -98,7 +97,7 @@ export default function Search() {
                                         <p>{item.value}</p>
                                     </div>
                                 </Link>
-                            </>
+                            </div>
                         ))}
                     </div>
                 )}
