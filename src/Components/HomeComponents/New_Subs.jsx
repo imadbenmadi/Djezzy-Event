@@ -9,7 +9,7 @@ export default function New_Subs() {
           <div className=" h-[250] overflow-auto flex">
               <div className=" flex gap-2 p-2">
                   <div
-                      className="relative w-[350px] h-[200px] bg-gray-100 rounded-xl flex flex-col "
+                      className="relative w-[300px] h-[200px] bg-gray-100 rounded-xl flex flex-col "
                       style={{ boxShadow: "0px 0px 5px 0px gray" }}
                   >
                       <img
@@ -34,7 +34,7 @@ export default function New_Subs() {
                   </div>
 
                   <div
-                      className="relative w-[350px] h-[200px] bg-gray-100 rounded-xl flex flex-col "
+                      className="relative w-[300px] h-[200px] bg-gray-100 rounded-xl flex flex-col "
                       style={{ boxShadow: "0px 0px 5px 0px gray" }}
                   >
                       <img
@@ -59,7 +59,7 @@ export default function New_Subs() {
                   </div>
 
                   <div
-                      className="relative w-[350px] h-[200px] bg-gray-100 rounded-xl flex flex-col "
+                      className="relative w-[300px] h-[200px] bg-gray-100 rounded-xl flex flex-col "
                       style={{ boxShadow: "0px 0px 5px 0px gray" }}
                   >
                       <img
