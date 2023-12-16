@@ -4,7 +4,6 @@ import { useParams } from "react-router-dom";
 
 export default function Item() {
     const { key } = useParams();
-    // Find the item with the specified key
     const selectedItem = items[key];
     
     return (
@@ -13,6 +12,7 @@ export default function Item() {
                 <div>
                     <p>Key: {selectedItem.key}</p>
                     <p>Value: {selectedItem.value}</p>
+                    <img src={selectedItem.image} alt="" />
                     {/* Add any other data you want to display */}
                 </div>
             )}
