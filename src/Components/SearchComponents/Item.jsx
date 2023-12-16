@@ -1,22 +1,19 @@
-// Item.js
 import React from "react";
+import { items } from "../Pages/Search";
+import { useParams } from "react-router-dom";
 
-export default function Item(props) {
-    // Check if location and state exist
-    if (!props.location || !props.location.state) {
-        // Handle the case when the data is not available
-        return <div>Data not available</div>;
-    }
-
-    // Access the item data from props
-    const item = props.location.state.item;
+export default function Item() {
+    const { index } = useParams();
 
     return (
         <div>
-            <h1>Item Details</h1>
-            <p>Key: {item.key}</p>
-            <p>Value: {item.value}</p>
-            {/* Add more details based on your item data structure */}
+            {items[index] && (
+                <div>
+                    <p>Key: {items[index].key}</p>
+                    <p>Value: {items[index].value}</p>
+                    {/* Add any other data you want to display */}
+                </div>
+            )}
         </div>
     );
 }

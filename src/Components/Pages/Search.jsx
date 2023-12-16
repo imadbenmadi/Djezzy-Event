@@ -8,11 +8,18 @@ import ImgMedicin from "../../assets/medicin.png";
 import ImgBank from "../../assets/bank.jpg";
 import ImgTaxi from "../../assets/taxi.png";
 import { Link } from "react-router-dom";
-
+export const items = [
+    { key: "medicin", value: "Aspirin", image: ImgMedicin },
+    { key: "bank", value: "Bank of America", image: ImgBank },
+    { key: "taxi", value: "Yellow Taxi", image: ImgTaxi },
+    { key: "medicin", value: "Paracetamol", image: ImgMedicin },
+    { key: "bank", value: "Wells Fargo", image: ImgBank },
+    // Add more items with different key-value pairs and images
+];
 // Define the Search component
 export default function Search() {
     const [searchTerm, setSearchTerm] = useState("");
-    const items = [
+     const items = [
         { key: "medicin", value: "Aspirin", image: ImgMedicin },
         { key: "bank", value: "Bank of America", image: ImgBank },
         { key: "taxi", value: "Yellow Taxi", image: ImgTaxi },
@@ -74,7 +81,7 @@ export default function Search() {
                         {filteredItems.map((item, index) => (
                             // Pass data to the Company component via props
                             <Link
-                                to={{ pathname: `/Search/${index}`, state: { item } }}
+                                to={ `/Search/${index}` }
                                 key={index}
                             >
                                 <div className="bg-gray-200 p-3 rounded flex justify-start items-center gap-5">
