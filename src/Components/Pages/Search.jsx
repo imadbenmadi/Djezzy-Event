@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { IoMdArrowRoundBack } from "react-icons/io";
 import { CiSearch } from "react-icons/ci";
-
+import Img from "../../assets/NotFound_Search.png";
 export default function Search() {
     const [searchTerm, setSearchTerm] = useState("");
     const items = [
@@ -37,7 +37,12 @@ export default function Search() {
                     </div>
                 </div>
             </div>
-            <div className="grid grid-cols-3 gap-4 p-4">
+            {filteredItems.length === 0 && (
+                <div className="flex justify-center items-center h-[60vh]">
+                    <img src={Img} alt="" />
+                </div>
+            )}
+            <div className="flex flex-col gap-4 p-4">
                 {filteredItems.map((item, index) => (
                     <div key={index} className="bg-gray-200 p-3 rounded">
                         <p className="font-bold">Key: {item.key}</p>
