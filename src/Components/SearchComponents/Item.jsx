@@ -9,6 +9,7 @@ import Recomondation from "./Recomondation";
 import Adds from "./Adds";
 import Observation from "./observation";
 import Item_Detail from "./Item_Detail";
+import NewButtons from "./NewButtons";
 export default function Item() {
     const { key } = useParams();
     const selectedItem = items[key];
@@ -51,7 +52,9 @@ export default function Item() {
                 <Recomondation />
             </div>
             <Item_Detail />
+            <NewButtons />
             <Observation />
+
         </div>
     );
 }
