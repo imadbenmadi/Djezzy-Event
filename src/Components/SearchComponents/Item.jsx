@@ -46,13 +46,14 @@ export default function Item() {
                 </div>
                 <div>{selectedItem.description}</div>
             </div>
+            <Item_Detail />
+            <NewButtons />
             <Item_description />
             <div className=" flex flex-col-reverse gap-0 md:gap-10  md:flex-row justify-center items-center ">
                 <Adds />
                 <Recomondation />
             </div>
-            <Item_Detail />
-            <NewButtons />
+            
             <Observation />
         </div>
     );
