@@ -15,7 +15,7 @@ export default function App() {
                 <div>Notificatiopn</div>
                 <div>Categories </div>
                 <div>Save </div>
-                <div>Settings </div>
+                {/* <div>Settings </div> */}
             </div>
         </>
     );
