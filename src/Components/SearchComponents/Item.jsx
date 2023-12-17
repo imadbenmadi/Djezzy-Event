@@ -21,7 +21,7 @@ export default function Item() {
                 style={{ boxShadow: "0px 0px 5px 0px gray" }}
             >
                 <Link to={"/Search"}>
-                    <IoMdArrowRoundBack className="text-2xl text-purple-500" />
+                    <IoMdArrowRoundBack className="text-2xl text-[#0600ff]" />
                 </Link>
             </div>
 
@@ -54,7 +54,6 @@ export default function Item() {
             <Item_Detail />
             <NewButtons />
             <Observation />
-
         </div>
     );
 }

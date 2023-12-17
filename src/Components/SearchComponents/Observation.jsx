@@ -8,13 +8,11 @@ export default function Observation() {
       >
           <div
               className=" text-xl underline
-           font-semibold mt-2 text-purple-500"
+           font-semibold mt-2 text-[#0600ff]"
           >
               Observation
           </div>
-          <p className="font-semibold mt-2 ">
-              Brief Description:
-          </p>
+          <p className="font-semibold mt-2 ">Brief Description:</p>
           <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac
               justo eu urna ullamcorper facilisis. Integer interdum ultricies

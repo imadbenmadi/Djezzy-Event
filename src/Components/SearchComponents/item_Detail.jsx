@@ -21,7 +21,7 @@ export default function Item_Detail() {
           </div>
           <div className=" flex gap-2">
               <div>
-                  <TbWorld className=" text-2xl text-purple-500" />
+                  <TbWorld className=" text-2xl text-[#0600ff]" />
               </div>
               <div>
                   <div className=" text-xl font-semibold">Position</div>
@@ -31,7 +31,7 @@ export default function Item_Detail() {
 
           <div className=" flex gap-2">
               <div>
-                  <MdAttachMoney className=" text-2xl text-purple-500" />
+                  <MdAttachMoney className=" text-2xl text-[#0600ff]" />
               </div>
               <div>
                   <div className=" text-xl font-semibold">Fairs</div>
@@ -41,7 +41,7 @@ export default function Item_Detail() {
 
           <div className=" flex gap-2">
               <div>
-                  <FaCalendarAlt className=" text-2xl text-purple-500" />
+                  <FaCalendarAlt className=" text-2xl text-[#0600ff]" />
               </div>
               <div>
                   <div className=" text-xl font-semibold">
@@ -53,7 +53,7 @@ export default function Item_Detail() {
 
           <div className=" flex gap-2">
               <div>
-                  <GoFileDirectoryFill className=" text-2xl text-purple-500" />
+                  <GoFileDirectoryFill className=" text-2xl text-[#0600ff]" />
               </div>
               <div>
                   <div className=" text-xl font-semibold">Type de dossier</div>
@@ -63,7 +63,7 @@ export default function Item_Detail() {
 
           <div className=" flex gap-2">
               <div>
-                  <FaLink className=" text-2xl text-purple-500" />
+                  <FaLink className=" text-2xl text-[#0600ff]" />
               </div>
               <div>
                   <div className=" text-xl font-semibold">Site web</div>

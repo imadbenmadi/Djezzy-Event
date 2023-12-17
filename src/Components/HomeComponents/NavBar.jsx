@@ -11,7 +11,7 @@ export default function NavBar() {
             <div className=" flex flex-col w-[100%] text-center">
                 <div className="  ">
                     Bienvenue
-                    <span className=" ml-1 text-purple-500 font-semibold">
+                    <span className=" ml-1 text-[#0600ff] font-semibold">
                         Guest
                     </span>
                 </div>

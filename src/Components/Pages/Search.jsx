@@ -64,10 +64,10 @@ export default function Search() {
                         style={{ boxShadow: "0px 0px 5px 0px gray" }}
                     >
                         <Link to={"/"}>
-                            <IoMdArrowRoundBack className="text-3xl text-purple-500" />
+                            <IoMdArrowRoundBack className="text-3xl text-[#0600ff]" />
                         </Link>
                     </div>
-                    <div className="flex items-center bg-white rounded-full overflow-hidden shadow-xl focus-within:ring-2 focus-within:ring-purple-500">
+                    <div className="flex items-center bg-white rounded-full overflow-hidden shadow-xl focus-within:ring-2 focus-within:ring-[#0600ff]">
                         <div className="flex-1 md:w-[450px]">
                             <input
                                 id="search_input"
