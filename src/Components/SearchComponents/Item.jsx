@@ -7,7 +7,7 @@ import { FaCheck } from "react-icons/fa";
 import Item_description from "./Item_description";
 import Recomondation from "./Recomondation";
 import Adds from "./Adds";
-import Observation from "./observation";
+import Observation from "./Observation";
 import Item_Detail from "./Item_Detail";
 import NewButtons from "./NewButtons";
 export default function Item() {
