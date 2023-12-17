@@ -50,8 +50,8 @@ export default function Item() {
                 <Adds />
                 <Recomondation />
             </div>
-            <Observation/>
-            <Item_Detail/>
+            <Item_Detail />
+            <Observation />
         </div>
     );
 }
