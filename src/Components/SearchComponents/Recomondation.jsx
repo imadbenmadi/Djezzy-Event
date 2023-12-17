@@ -1,12 +1,11 @@
 import React from 'react'
 import ImgBank from "../../assets/bank.jpg";
-
 export default function Recomondation() {
   return (
       <div className=' mt-10'>
           <div className=' text-center font-bold text-xl'>Recomondation</div>
           <div
-              className="relative w-[300px] h-[200px] m-auto mt-2 bg-gray-100 rounded-xl flex flex-col "
+              className="relative w-[300px] h-[200px] m-auto mt-2 bg-white rounded-xl flex flex-col "
               style={{ boxShadow: "0px 0px 5px 0px gray" }}
           >
               <img
