@@ -1,6 +1,12 @@
 import React from "react";
 import "./App.css";
 import { Outlet } from "react-router";
+import { FaHome } from "react-icons/fa";
+import { IoNotifications } from "react-icons/io5";
+import { MdOutlineCategory } from "react-icons/md";
+import { FaSave } from "react-icons/fa";
+import { IoMdSettings } from "react-icons/io";
+
 export default function App() {
     return (
         <>
@@ -8,14 +14,16 @@ export default function App() {
                 <Outlet />
             </div>
             <div
-                className=" bg-[#0600ff]  text-white font-bold w-full h-[60px] absolute bottom-0 flex  items-center justify-center gap-4 z-50
+                className=" bg-gray-100  text-white font-bold w-full h-[40px] md:h-[60px] absolute bottom-0 flex  items-center justify-around gap-4 z-50
       "
+                    style={{ boxShadow: "0px 0px 10px 0px #bdbdbd" }}
+                
             >
-                <div>home </div>
-                <div>Notificatiopn</div>
-                <div>Categories </div>
-                <div>Save </div>
-                {/* <div>Settings </div> */}
+                <div><FaHome className=" text-2xl text-[#0600ff]"/></div>
+                <div><IoNotifications className=" text-2xl text-[#0600ff]"/></div>
+                <div><MdOutlineCategory className=" text-2xl text-[#0600ff]"/> </div>
+                <div><FaSave className=" text-2xl text-[#0600ff]"/> </div>
+                <div><IoMdSettings className=" text-2xl text-[#0600ff]"/> </div>
             </div>
         </>
     );
