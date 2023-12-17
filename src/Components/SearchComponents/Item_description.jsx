@@ -2,8 +2,13 @@ import React from 'react'
 
 export default function Item_description() {
   return (
-      <div style={{ boxShadow: "0px 0px 12px 0px gray" }} className=' p-2 rounded-2xl mt-8'>
-          <p className="text-2xl underline font-semibold mt-4">Description:</p>
+      <div
+          style={{ boxShadow: "0px 0px 12px 0px gray" }}
+          className=" p-2 rounded-2xl mt-8"
+      >
+          <p className="text-2xl underline font-semibold mt-4 text-purple-500">
+              Description:
+          </p>
           <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac
               justo eu urna ullamcorper facilisis. Integer interdum ultricies

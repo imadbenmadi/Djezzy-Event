@@ -4,11 +4,17 @@ export default function Observation() {
   return (
       <div
           style={{ boxShadow: "0px 0px 8px 0px gray" }}
-          className="p-2 rounded-lg w-[50%] m-auto mt-[50px]"
+          className="p-2 rounded-lg w-full md:w-[50%] m-auto mt-[50px]"
       >
-          <div className=" text-xl underline
-           font-semibold mt-2">Observation</div>
-          <p className="font-semibold mt-2">Brief Description:</p>
+          <div
+              className=" text-xl underline
+           font-semibold mt-2 text-purple-500"
+          >
+              Observation
+          </div>
+          <p className="font-semibold mt-2 ">
+              Brief Description:
+          </p>
           <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac
               justo eu urna ullamcorper facilisis. Integer interdum ultricies
