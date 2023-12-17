@@ -20,7 +20,7 @@ export default function Observation() {
           </p>
           <p className="font-semibold mt-3">Challenges & Strength:</p>
           <p>
-              Life's challenges build resilience. Cultivate strength to navigate
+              Lifes challenges build resilience. Cultivate strength to navigate
               adversity and stand tall in uncertainties.
           </p>
           <p className="font-semibold mt-3">Embracing Diversity:</p>

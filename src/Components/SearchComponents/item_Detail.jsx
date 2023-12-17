@@ -45,7 +45,7 @@ export default function Item_Detail() {
               </div>
               <div>
                   <div className=" text-xl font-semibold">
-                      Date D'expiration
+                      Date Dexpiration
                   </div>
                   <div>04-11-2023 </div>
               </div>

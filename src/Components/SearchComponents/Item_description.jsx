@@ -43,10 +43,10 @@ export default function Item_description() {
           {/* Subtitle 2 */}
           <p className="font-semibold mt-4">Cultivating Resilience:</p>
           <p>
-              Life's challenges are the building blocks of resilience. Cultivate
+              Lifes challenges are the building blocks of resilience. Cultivate
               the strength to navigate through adversity. Like a sturdy tree
               withstands the storm, develop resilience that allows you to stand
-              tall in the face of life's uncertainties.
+              tall in the face of lifes uncertainties.
           </p>
           {/* Subtitle 3 */}
           <p className="font-semibold mt-4">Harmony of Diversity:</p>
