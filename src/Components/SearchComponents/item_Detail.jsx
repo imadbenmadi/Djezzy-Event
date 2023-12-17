@@ -1,5 +1,9 @@
 import React from 'react'
 import { TbWorld } from "react-icons/tb";
+import { MdAttachMoney } from "react-icons/md";
+import { FaCalendarAlt } from "react-icons/fa";
+import { GoFileDirectoryFill } from "react-icons/go";
+import { FaLink } from "react-icons/fa6";
 
 export default function Item_Detail() {
  
@@ -11,7 +15,7 @@ export default function Item_Detail() {
       >
           <div
               className=" text-xl underline
-           font-semibold mt-2 text-purple-500 mb-7"
+           font-semibold mt-2 mb-7"
           >
               Detail
           </div>
@@ -24,48 +28,48 @@ export default function Item_Detail() {
                   <div>National</div>
               </div>
           </div>
-          
+
           <div className=" flex gap-2">
               <div>
-                  <TbWorld className=" text-2xl text-purple-500" />
+                  <MdAttachMoney className=" text-2xl text-purple-500" />
               </div>
               <div>
-                  <div className=" text-xl font-semibold">Position</div>
-                  <div>National</div>
-              </div>
-          </div>
-        
-          <div className=" flex gap-2">
-              <div>
-                  <TbWorld className=" text-2xl text-purple-500" />
-              </div>
-              <div>
-                  <div className=" text-xl font-semibold">Position</div>
-                  <div>National</div>
+                  <div className=" text-xl font-semibold">Fairs</div>
+                  <div>inclut fairs du dossier </div>
               </div>
           </div>
 
-          
           <div className=" flex gap-2">
               <div>
-                  <TbWorld className=" text-2xl text-purple-500" />
+                  <FaCalendarAlt className=" text-2xl text-purple-500" />
               </div>
               <div>
-                  <div className=" text-xl font-semibold">Position</div>
-                  <div>National</div>
+                  <div className=" text-xl font-semibold">
+                      Date D'expiration
+                  </div>
+                  <div>04-11-2023 </div>
               </div>
           </div>
-          
+
           <div className=" flex gap-2">
               <div>
-                  <TbWorld className=" text-2xl text-purple-500" />
+                  <GoFileDirectoryFill className=" text-2xl text-purple-500" />
               </div>
               <div>
-                  <div className=" text-xl font-semibold">Position</div>
-                  <div>National</div>
+                  <div className=" text-xl font-semibold">Type de dossier</div>
+                  <div>Dossier Administratif</div>
               </div>
           </div>
-          
+
+          <div className=" flex gap-2">
+              <div>
+                  <FaLink className=" text-2xl text-purple-500" />
+              </div>
+              <div>
+                  <div className=" text-xl font-semibold">Site web</div>
+                  <div>https://www.google.com</div>
+              </div>
+          </div>
       </div>
   );
 }
